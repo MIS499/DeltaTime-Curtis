@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61A1E4D6-FF31-4953-A05D-7E12408227C4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Timetracker20test</RootNamespace>
+    <AssemblyName>Timetracker20test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BLL\Category.cs" />
+    <Compile Include="App_Code\BLL\Project.cs" />
+    <Compile Include="App_Code\BLL\ProjectComparation.cs" />
+    <Compile Include="App_Code\BLL\TimeEntry.cs" />
+    <Compile Include="App_Code\BLL\UserReport.cs" />
+    <Compile Include="App_Code\BLL\UserTotalDurationReport.cs" />
+    <Compile Include="App_Code\DAL\DataAccessHelper.cs" />
+    <Compile Include="App_Code\DAL\DataAcess.cs" />
+    <Compile Include="App_Code\DAL\SQLDataAccessLayer.cs" />
+    <Compile Include="App_Code\DefaultValue.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeTracker\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\Project_Details.aspx.cs">
+      <DependentUpon>Project_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\Project_Details.aspx.designer.cs">
+      <DependentUpon>Project_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\Project_List.aspx.cs">
+      <DependentUpon>Project_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\Project_List.aspx.designer.cs">
+      <DependentUpon>Project_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\Report_Project.aspx.cs">
+      <DependentUpon>Report_Project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\Report_Project.aspx.designer.cs">
+      <DependentUpon>Report_Project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\Report_Project_Result.aspx.cs">
+      <DependentUpon>Report_Project_Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\Report_Project_Result.aspx.designer.cs">
+      <DependentUpon>Report_Project_Result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\Report_Resources.aspx.cs">
+      <DependentUpon>Report_Resources.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\Report_Resources.aspx.designer.cs">
+      <DependentUpon>Report_Resources.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\Report_Resources_Result.aspx.cs">
+      <DependentUpon>Report_Resources_Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\Report_Resources_Result.aspx.designer.cs">
+      <DependentUpon>Report_Resources_Result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\TimeEntry.aspx.cs">
+      <DependentUpon>TimeEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\TimeEntry.aspx.designer.cs">
+      <DependentUpon>TimeEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\User_Create.aspx.cs">
+      <DependentUpon>User_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\User_Create.aspx.designer.cs">
+      <DependentUpon>User_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\User_List.aspx.cs">
+      <DependentUpon>User_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\User_List.aspx.designer.cs">
+      <DependentUpon>User_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker\User_test.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker\User_test.aspx.designer.cs">
+      <DependentUpon>User_test.aspx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_Data\timetracker-add.sql" />
+    <Content Include="App_Data\TimeTracker.mdf" />
+    <Content Include="App_Data\TimeTracker_log.ldf">
+      <DependentUpon>TimeTracker.mdf</DependentUpon>
+    </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="EULA.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="MyTemplate.vstemplate" />
+    <Content Include="TimeTracker\Calendar.aspx" />
+    <Content Include="TimeTracker\images\background_addhours.jpg" />
+    <Content Include="TimeTracker\images\background_body.gif" />
+    <Content Include="TimeTracker\images\background_calendar.gif" />
+    <Content Include="TimeTracker\images\background_drop_menu.jpg" />
+    <Content Include="TimeTracker\images\background_formsection.gif" />
+    <Content Include="TimeTracker\images\background_main.jpg" />
+    <Content Include="TimeTracker\images\icon-calendar.gif" />
+    <Content Include="TimeTracker\images\icon-cancel.gif" />
+    <Content Include="TimeTracker\images\icon-delete.gif" />
+    <Content Include="TimeTracker\images\icon-edit.gif" />
+    <Content Include="TimeTracker\images\icon-save.gif" />
+    <Content Include="TimeTracker\images\icon_left_white_arrow.gif" />
+    <Content Include="TimeTracker\images\tab.gif" />
+    <Content Include="TimeTracker\images\tab_bg.gif" />
+    <Content Include="TimeTracker\images\tab_dim.gif" />
+    <Content Include="TimeTracker\images\timesheet_data_bg.gif" />
+    <Content Include="TimeTracker\images\time_tracker_logo.gif" />
+    <Content Include="TimeTracker\Login.aspx" />
+    <Content Include="TimeTracker\Project_Details.aspx" />
+    <Content Include="TimeTracker\Project_List.aspx" />
+    <Content Include="TimeTracker\Report_Project.aspx" />
+    <Content Include="TimeTracker\Report_Project_Result.aspx" />
+    <Content Include="TimeTracker\Report_Resources.aspx" />
+    <Content Include="TimeTracker\Report_Resources_Result.aspx" />
+    <Content Include="TimeTracker\script.js" />
+    <Content Include="TimeTracker\TimeEntry.aspx" />
+    <Content Include="TimeTracker\timetracker.css" />
+    <Content Include="TimeTracker\User_Create.aspx" />
+    <Content Include="TimeTracker\User_Edit.aspx" />
+    <Content Include="TimeTracker\User_List.aspx" />
+    <Content Include="Welcome.html" />
+    <Content Include="__TemplateIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProjectName.webproj" />
+    <Content Include="TimeTracker\MasterPage.master" />
+    <Content Include="TimeTracker\Web.config" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <Content Include="web.sitemap" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49842</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49842/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
